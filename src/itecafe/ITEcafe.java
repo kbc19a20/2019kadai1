@@ -101,6 +101,23 @@ private static Object Scan;
                  System.out.println(goukei);
                  
                  System.out.println("合計金額は" + goukei + "円です");
+                 
+                 //break;
+                 System.out.println("以上でよろしいでしょうか？");
+                 System.out.println("注文を終える場合は1を入力してください");
+                 System.out.println("1以外は追加注文できます");
+                 inputMtr = scan.next();
+                 inputNum = Integer.parseInt(inputMtr);
+                 if(inputNum == 1 ){
+                     break;
              }
             }
+            System.out.println("お支払い金額はどうされますか？");
+            String inputStr;
+            inputStr = scan.next();
+            int osiharai = Integer.parseInt(inputStr);
+            int oturi = osiharai-goukei;
+            System.out.println("お釣りは" + oturi + "円です");
+            System.out.println("ご利用ありがとうございました。");
         }
+}
